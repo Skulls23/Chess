@@ -7,7 +7,6 @@ public class Bishop extends APiece
         super("Bishop", color, xPos, yPos);
     }
 
-
     @Override
     public int[][] possibleMove()
     {
