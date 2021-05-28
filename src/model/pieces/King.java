@@ -1,5 +1,7 @@
 package model.pieces;
 
+import java.util.ArrayList;
+
 public class King extends APiece
 {
     public King(String color, int xPos, int yPos)
@@ -8,9 +10,9 @@ public class King extends APiece
     }
 
     @Override
-    public int[][] possibleMove()
+    public ArrayList<Integer[]> possibleMove()
     {
         //TODO
-        return new int[0][];
+        return null;
     }
 }
