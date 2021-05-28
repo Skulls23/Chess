@@ -1,24 +1,37 @@
 package view;
 
 import controller.Controller;
+import view.panels.BoardPnl;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Hmi extends JFrame
 {
-    String[] playersName;
+    private final Controller ctrl;
+
+    private String[] playersName;
+    private BoardPnl board;
 
     public Hmi(Controller ctrl)
     {
         setName("Chess");
         setSize(400, 400);
-        setVisible(true);
+
+        this.ctrl = ctrl;
 
         playersName = new String[2];
         gatherNames();
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        setVisible(true);
+    }
+
+    public void launch()
+    {
+        board = new BoardPnl(ctrl.getBoard(), this);
+        add(board, BorderLayout.CENTER);
     }
 
     private void gatherNames()
@@ -36,5 +49,6 @@ public class Hmi extends JFrame
 
     }
 
-    public String getPlayerName(int i) { return playersName[i]; }
+    public String     getPlayerName(int i) { return playersName[i]; }
+    public Controller getCtrl      ()      { return ctrl; }
 }

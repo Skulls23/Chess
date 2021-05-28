@@ -13,9 +13,14 @@ public class Controller
 
     public Controller()
     {
-        hmi = new Hmi(this);
-        ChessBoard chess = new ChessBoard(hmi.getPlayerName(0), hmi.getPlayerName(1));
+        hmi   = new Hmi(this);
+        board = new ChessBoard(hmi.getPlayerName(0), hmi.getPlayerName(1));
+
+        hmi.launch();
     }
+
+    public Hmi        getHmi  () { return hmi;   }
+    public ChessBoard getBoard() { return board; }
 
     public static void main(String[] args)
     {

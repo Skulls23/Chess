@@ -16,8 +16,8 @@ public class Box
      */
     public Box(boolean color)
     {
-        if(color) this.color = "black";
-        else this.color = "white";
+        if(color) this.color = "white";
+        else this.color = "black";
 
         piece      = null;
     }

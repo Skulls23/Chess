@@ -46,7 +46,6 @@ public class ChessBoard
         placingPieces("black");
     }
 
-
     /**
      * Place the different pieces on their initial spot on the board
      * @param color The team's color of the pieces
@@ -80,4 +79,6 @@ public class ChessBoard
             board[secondLine][i].setPiece(new Pawn(color, secondLine, i));
         }
     }
+
+    public Box getBox(int i, int j) { return board[i][j]; }
 }
