@@ -7,8 +7,8 @@ import model.pieces.APiece;
  */
 public class Box
 {
-    String color;
-    APiece piece;
+    private final String color;
+    private APiece piece;
 
     /**
      * The constructor
@@ -25,7 +25,6 @@ public class Box
     public String getColor() { return color; }
     public APiece getPiece() { return piece; }
 
-    public void setColor(String color) { this.color = color; }
     public void setPiece(APiece piece) { this.piece = piece; }
 
 

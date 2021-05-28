@@ -11,8 +11,10 @@ public class ChessBoard
 {
     public static final int BOARD_LENGTH = 8;
 
-    Box[][]  board;
-    Player[] players;
+    private final Player[] players;
+
+    private Box[][]  board;
+
 
     /**
      * The constructor
@@ -22,8 +24,9 @@ public class ChessBoard
     public ChessBoard(String player1Name, String player2Name)
     {
         players = new Player[2];
-        players[0] = new Player(player1Name);
-        players[1] = new Player(player2Name);
+
+        players[0] = new Player(player1Name, "white");
+        players[1] = new Player(player2Name, "black");
 
         buildBoard();
     }

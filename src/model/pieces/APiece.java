@@ -5,10 +5,11 @@ package model.pieces;
  */
 public abstract class APiece implements IPiece
 {
-    private String name;
-    private String color;
-    private int    xPos;
-    private int    yPos;
+    private final String name;
+    private final String color;
+
+    private int xPos;
+    private int yPos;
 
     /**
      * The constructor of all pieces
@@ -30,8 +31,6 @@ public abstract class APiece implements IPiece
     public int    getxPos () { return xPos;  }
     public int    getyPos () { return yPos;  }
 
-    public void setName (String name)  { this.name = name;   }
-    public void setColor(String color) { this.color = color; }
     public void setxPos (int xPos)     { this.xPos = xPos;   }
     public void setyPos (int yPos)     { this.yPos = yPos;   }
 
