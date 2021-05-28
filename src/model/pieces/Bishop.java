@@ -2,7 +2,7 @@ package model.pieces;
 
 public class Bishop extends APiece
 {
-    public Bishop(String name, String color, int xPos, int yPos)
+    public Bishop(String color, int xPos, int yPos)
     {
         super("Bishop", color, xPos, yPos);
     }

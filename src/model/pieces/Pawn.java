@@ -2,7 +2,7 @@ package model.pieces;
 
 public class Pawn extends APiece
 {
-    public Pawn(String name, String color, int xPos, int yPos)
+    public Pawn(String color, int xPos, int yPos)
     {
         super("Pawn", color , xPos, yPos);
     }

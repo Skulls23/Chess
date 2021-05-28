@@ -2,7 +2,7 @@ package model.pieces;
 
 public class Rook extends APiece
 {
-    public Rook(String name, String color, int xPos, int yPos)
+    public Rook(String color, int xPos, int yPos)
     {
         super("Rook", color, xPos, yPos);
     }
