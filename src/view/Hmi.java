@@ -25,13 +25,14 @@ public class Hmi extends JFrame
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        setVisible(true);
     }
 
     public void launch()
     {
         board = new BoardPnl(ctrl.getBoard(), this);
         add(board, BorderLayout.CENTER);
+        board.revalidate();
+        setVisible(true);
     }
 
     private void gatherNames()

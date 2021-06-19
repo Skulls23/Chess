@@ -80,5 +80,7 @@ public class ChessBoard
         }
     }
 
-    public Box getBox(int i, int j) { return board[i][j]; }
+    public Box      getBox(int i, int j) { return board[i][j]; }
+    public Player[] getPlayers()         { return players;     }
+    public Player   getPlayer(int i)     { return players[i];  }
 }
